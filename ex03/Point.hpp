@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mburgler <mburgler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 13:57:04 by mburgler          #+#    #+#             */
-/*   Updated: 2024/03/23 15:57:45 by mburgler         ###   ########.fr       */
+/*   Created: 2024/03/23 16:00:30 by mburgler          #+#    #+#             */
+/*   Updated: 2024/03/23 16:48:12 by mburgler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "Fixed.hpp"
 
-int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
-    return 0;
-}
+class Point {
+	private:
+		const Fixed m_x;
+		const Fixed m_y;
+	public:
+		Point(void);
+		Point(const Point& ref);
+		Point(const float x, const float y);
+		~Point(void);
+		Point& operator= (const Point& ref);
+};
