@@ -6,7 +6,7 @@
 /*   By: mburgler <mburgler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 16:00:30 by mburgler          #+#    #+#             */
-/*   Updated: 2024/03/23 16:48:12 by mburgler         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:52:25 by mburgler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,7 @@ class Point {
 		Point(const float x, const float y);
 		~Point(void);
 		Point& operator= (const Point& ref);
+
+		Fixed	get_x( void ) const;
+		Fixed	get_y( void ) const;
 };
